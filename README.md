@@ -2,6 +2,16 @@
 
 Interactive, English-language employee learning pilot. Buildless HTML, CSS and JavaScript; deploy `dist/`.
 
+## Deploy on Vercel
+
+Import this GitHub repository at https://vercel.com/new. The tracked `vercel.json` selects the static `dist/` directory and checks both JavaScript files before deployment. No dependencies or environment variables are required. Pushes to the connected production branch (`main`) trigger new deployments.
+
+For local preview, run `python3 -m http.server 3000 --directory dist` and open http://localhost:3000.
+
+ChatGPT Sites access restrictions do not transfer to Vercel. Configure Vercel Deployment Protection separately if access should be restricted. Learning progress stays in the browser's localStorage for each origin; existing progress on the ChatGPT domain will not appear automatically on the Vercel domain.
+
+The `.openai/hosting.json` file identifies the original ChatGPT Site and is not used by Vercel.
+
 ## Features
 
 - Eight missions with 24 fictional decisions. Six missions focus on IDEX products and the identity / access lifecycle; two cover everyday security and response.
